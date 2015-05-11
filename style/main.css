@@ -1,0 +1,361 @@
+	
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	}
+
+img {
+    border: none;
+} 
+	
+#menu {
+	width: 200px;
+	margin: 1px;
+	}
+	
+#menu li a {
+	height: 32px;
+  	voice-family: "\"}\""; 
+  	voice-family: inherit;
+  	height: 24px;
+	text-decoration: none;
+	}	
+	
+#menu li a:link, #menu li a:visited {
+	color: #FFF;
+	display: block;
+	background:  url(/img/menu.gif);
+	padding: 8px 0 0 35px;
+	}
+	
+#menu li a:hover, #menu li #current {
+	color: #FFF;
+	background:  url(/img/menu.gif) 0 -32px;
+	padding: 8px 0 0 35px;
+	}
+	
+#menu2 {
+	width: 200px;
+	margin: 1px;
+	}
+	
+#menu2 li a {
+	height: 32px;
+  	voice-family: "\"}\""; 
+  	voice-family: inherit;
+  	height: 24px;
+	text-decoration: none;
+	}	
+	
+#menu2 li a:link, #menu2 li a:visited {
+	color: #FFF;
+	display: block;
+	background:  url(/img/menu2.gif);
+	padding: 8px 0 0 35px;
+	}
+	
+#menu2 li a:hover, #menu2 li #current {
+	color: #FFF;
+	background:  url(/img/menu2.gif) 0 -32px;
+	padding: 8px 0 0 35px;
+	}
+
+td#menuleft {
+	border-right-width: 1px;
+	border-right-style: dashed;
+	vertical-align: top;
+	}
+
+table#maintable {
+		border: 0px;
+		border-collapse: collapse;
+		border-spacing: 0px;
+	}
+table#headertable {
+	border: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	}
+	
+input#txt-login	{
+			clear:left;
+			background-color: #3E3E3E; 
+			font: 11px Verdana, Geneva, Arial, Helvetica, sans-serif; 
+			width:112px;
+			height:15px;
+			padding:0;
+			border:1px solid #171717;
+			color:#CACACA;
+			padding:1px 6px;
+			margin:0 0 6px;
+			text-align: center;
+			-moz-border-radius: 10px;
+	}
+	
+input#bt-login {
+			clear:left;
+			background-color: #A9A9A9;
+			font: 11px Verdana, Geneva, Arial, Helvetica, sans-serif; 
+			width:50px;
+			height:20px;
+			padding:0;
+			border:1px solid #171717;
+			color: #3E3E3E;
+			padding:1px 6px;
+			margin:0 0 6px;
+			text-align: center;
+			-moz-border-radius: 10px;	
+	}
+
+input#bt-reg {
+			clear:left;
+			background-color: #A9A9A9; 
+			font: 11px Verdana, Geneva, Arial, Helvetica, sans-serif; 
+			width:80px;
+			height:20px;
+			padding:0;
+			border:1px solid #171717;
+			color: #3E3E3E;
+			padding:1px 6px;
+			margin:0 0 6px;
+			text-align: center;
+			-moz-border-radius: 10px;	
+	}
+
+h2#title {
+	color: #2F2956;
+	text-decoration: none;
+	line-height: 1;
+	text-shadow: 1px 1px 0px #A9A9A9;
+	margin: 0 0 6px;
+	}
+
+table#article {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-radius: 3px;
+	margin-left: 15px; 
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 15px;
+	width: 770px;
+	background-color: white;
+	border-width: 1px;
+	border-color: #CCCCCC;
+	}	
+	
+div#content {
+	margin-left: 27px;
+	margin-top: 6px;
+	margin-right: 6px;
+	margin-bottom: 5px;
+	text-align: justify;
+	font: .90em Verdana, sans-serif;
+	line-height: 19px;
+	color: #272727;
+	}
+
+a#comment {
+	color: #6da3bd;
+	font: .75em Verdana, sans-serif;
+	text-decoration:none;
+	border-bottom:1px solid #6DA3BD;
+	}
+	
+div#author {
+	color: #6da3bd;
+	font: .75em Verdana, sans-serif;
+	text-decoration:none;
+	margin-left: 27px;
+	margin-top: 5px;
+	}
+
+b#page {
+	color: black;
+	font: .75em Verdana, sans-serif;
+	text-decoration:none;
+	
+	}	
+	
+div#data {
+	color: #6da3bd;
+	font: .75em Verdana, sans-serif;
+	text-decoration:none;
+	margin-top: 5px;
+	}
+	
+p#top {
+	color: black;
+	font: .84em Verdana, sans-serif;
+	text-decoration: underline;
+	margin-top: 10px;
+	margin-left: 12px;
+	}
+	
+table#regform {
+
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -250px;
+	border-color: #A7A7A7;
+	border-style: solid;
+	border-width: 1px;
+	}
+		
+div#regtitle {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font: 1.20em Verdana, sans-serif;
+	text-decoration: underline;
+	text-shadow: 1px 1px 0px #A9A9A9;
+	}
+	
+input#bt_reg {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	color: red;
+	text-shadow: 1px 1px 0px #A9A9A9;
+	}
+	
+div#text_reg {
+	color: #3E3E3E;
+	text-align: right;
+	margin-left: 20px;
+	margin-right: 5px;
+	font: 0.84em Verdana, sans-serif;
+	}
+input#inp_reg {
+	margin-right: 20px;
+	font: 0.84em Verdana, sans-serif;
+	text-align: center;
+	
+	}
+	
+td#reg {
+	border-right-color: #8C8C8C;
+	border-right-style: dashed;
+	border-right-width: 1px;
+	}
+table#regdone {
+	background-color: white;
+	margin-left: 20px;
+	margin-top: 50px;
+	border-color: #00E50A;
+	border-style: solid;
+	border-width: 1px;
+	width: 96%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font: 0.84em Verdana, sans-serif;
+	color: #0005A8;
+	text-align: center;
+	}
+	
+input#lname {
+	color: #464646;
+	font: 0.70em Verdana, sans-serif;
+	background-color: black;
+	border-style: none;
+	}
+	
+input#logout {
+	margin-left: 300px;
+	color: #B00000;
+	font: 0.70em Verdana, sans-serif;
+	background-color: black;
+	border-style: none;
+	}
+	
+textarea#text, input#text{
+	font: 0.70em Verdana, sans-serif;
+	margin-left: 25px;
+	margin-bottom: 5px;
+	}
+	
+div#adder {
+	font: 0.84em Verdana, sans-serif;
+	margin-left: 25px;
+	margin-top: 15px;
+	}
+input#asubmit {
+	margin-left: 655px;
+	margin-top: 25px;
+	margin-bottom: 30px;
+	text-shadow: 1px 1px 0px #A9A9A9;
+	}
+	
+table#comment {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-radius: 3px;
+	margin-left: 15px; 
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 15px;
+	width: 770px;
+	background-color: white;
+	border-width: 1px;
+	border-color: #CCCCCC;
+	font: 0.90em Verdana, sans-serif;
+	}
+
+tr#comment {
+	border-bottom-color: #CCCCCC;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	font: 0.84em Verdana, sans-serif;
+	}
+	
+div#number {
+	color: #525252;
+	}
+
+div#date2 {
+	color: #525252;
+	text-align: right;
+	}
+
+textarea#comm {
+	margin-left: 25px;
+	border-width: 0px;
+	background-color: white;
+	color: black;
+	}
+	
+textarea#commtext {
+	margin-left: 25px;
+	color: black;
+	}
+	
+input#commtext {
+	margin-left: 25px;
+	color: black;
+	}
+	
+input#delete {
+	background-color: white;
+	border-width: 0px;
+	color: red;
+	background-image: url(/img/delete-icon.png);
+	height: 16px;
+	width: 16px;
+	}
+input#white {
+	background-color: white;
+	border-width: 0px;
+	color: white;
+	height: 16px;
+	width: 16px;
+	}
+	
+input#bt-edit {
+	background-color: white;
+	border-width: 0px;
+	color: red;
+	background-image: url(/img/edit-icon.png);
+	height: 16px;
+	width: 16px;
+	}

@@ -1,0 +1,47 @@
+
+/*   layout   */
+#header-wrapper {
+	position:relative;
+	/*overflow:hidden;*/
+	min-width:760px;
+	}	
+
+#wrapper {
+	width: 95%;
+	min-width: 725px;
+	clear: both;
+	margin:0 auto;
+/*	overflow: hidden;*/
+}
+#inner {
+  margin:0 auto;
+  max-width: 1200px;
+}
+
+	#main-content {
+		float: left;
+		width: 66%;
+		clear: left;
+		margin-right: 2%;
+/*		overflow: hidden;*/
+	}
+	#sidebar {
+		float: left;
+		width: 31%;
+	}
+
+
+
+
+
+/*   main   */
+body, html {
+	height: 100%;
+}
+body {
+	font: .75em Verdana, sans-serif; /*12px is font-size for main content. Base font size*/
+	color:#000;
+	background:#fff;
+}
+
+
