@@ -42,7 +42,7 @@
 														if(!empty($file))
 														{
   															ini_set('memory_limit', '32M');
-  															$maxsize = "1000000";
+															$maxsize = "83886080";
 															$extentions = array("gif","jpg","jpeg","png");
   															$size = filesize ($_FILES['file']['tmp_name']);
   															$type = strtolower(substr($filename, 1+strrpos($filename,".")));
