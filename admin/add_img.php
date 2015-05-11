@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+﻿<?php session_start(); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
@@ -65,7 +65,7 @@
 																		$input_file = $dots."img/photo/".$new_name;
 																		$output_file = $dots."img/photo/thumbs/thumb-".$new_name;
 																		Thumbnail::output($input_file, $output_file);
-																		$tt = "http://myhost.net/";
+																		$tt = "http://badm.ua/";
 																		$tfull = $tt."img/photo/".$new_name;
 																		$tthumb = $tt."img/photo/thumbs/thumb-".$new_name;
 																		echo("<br><center><font color='green'>адрес файла: <a href='".$tfull."' >".$tfull."</a></font></center>");

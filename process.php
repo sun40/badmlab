@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+﻿<?php session_start(); ?>
 <?php include("blocks/connect.php"); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -61,7 +61,7 @@
 														$query = "INSERT INTO users (`user_id`, `user_login`, `user_email`, `user_pass`, `user_priv`) VALUES (NULL, '$login', '$email', '$pass', 'u')";
 														mysql_query($query) or die(mysql_error());
 														mysql_close();
-														header("Location: http://myhost.net/reg_seccess.php");
+														header("Location: http://badm.ua/reg_seccess.php");
 														}		
 														else echo("<div align='center'>Post method is empty!</div>"); 
 												   }
@@ -86,13 +86,13 @@
 												 			
 												 			echo("Добро пожаловать на сайт, ".$name."!");
 												 			echo("<br><br><div>Вы будете перенаправлены на главную страницу через <span id='timer'></span> секунд.</div>");
-												 			echo("<div>Если ваш браузер не поддерживает автоматического перенаправления воспользуйтесь <a href='http://myhost.net/index.php' >ссылкой</a> </div>");
+												 			echo("<div>Если ваш браузер не поддерживает автоматического перенаправления воспользуйтесь <a href='http://badm.ua/index.php' >ссылкой</a> </div>");
 												 			
 												 		}
 											 		}
 											 		elseif($_POST[track] == "logout") {
 											 			session_destroy();
-											 			header("Location: http://myhost.net/index.php");
+											 			header("Location: http://badm.ua/index.php");
 											 		}
 											 		elseif($_POST[track] == "comment") {
 											 			$page = $_POST['page'];
@@ -103,7 +103,7 @@
 											 			echo($page);
 											 			$query = "INSERT INTO comments (id, date, text, page_id, user_id) VALUES (NULL, '$date', '$text', '$page', '$user')";
 														mysql_query($query) or die(mysql_error());
-														header("Location: http://myhost.net/comments.php?id=".$page);		
+														header("Location: http://badm.ua/comments.php?id=".$page);		
 											 		}
 											 		elseif($_POST[track] == "del_pic") {
 											 			$pic = $_POST['pic_id'];
@@ -113,13 +113,13 @@
 											 			$picpath = $_POST['pic_path'];
 											 			unlink("/home/sun40/etc/web".$picthumb);
 											 			unlink("/home/sun40/etc/web".$picpath);
-											 			header("Location: http://myhost.net/photo.php");
+											 			header("Location: http://badm.ua/photo.php");
 											 		}
 											 		elseif($_POST[track] == "del_news") {
 											 			$news_id = $_POST['news_id'];
 											 			$query = "DELETE FROM articles WHERE article_id = '$news_id'";
 											 			mysql_query($query) or die(mysql_error());
-														header("Location: http://myhost.net/index.php");
+														header("Location: http://badm.ua/index.php");
 											 		}
 											 		elseif($_POST[track] == "del_video") {
 											 			echo($_POST['video_id']);
@@ -129,14 +129,14 @@
 											 			$query = "DELETE FROM video WHERE id = '$vid'";
 											 			mysql_query($query) or die(mysql_error());
 											 			unlink("/home/sun40/etc/web".$path);
-											 			header("Location: http://myhost.net/video.php");
+											 			header("Location: http://badm.ua/video.php");
 											 		}
 											 		elseif($_POST[track] == "del_com") {
 											 			$cid = $_POST[com_id];
 											 			$back = $_POST[back];
 											 			$query = "DELETE FROM comments WHERE id = '$cid'";
 											 			mysql_query($query) or die(mysql_error());
-											 			header("Location: http://myhost.net/comments.php?id=".$back);
+											 			header("Location: http://badm.ua/comments.php?id=".$back);
 											 			
 											 		}
 											 		

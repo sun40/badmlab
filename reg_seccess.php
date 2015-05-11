@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+﻿<?php session_start(); ?>
 <?php include("blocks/connect.php"); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -52,7 +52,7 @@
 											}
 											var tm=setInterval('refr_time();',1000);
 											</script>
-											<br><div>Если ваш браузер не поддерживает автоматического перенаправления воспользуйтесь <a href="http://myhost.net/index.php" >ссылкой</a> </div>
+											<br><div>Если ваш браузер не поддерживает автоматического перенаправления воспользуйтесь <a href="http://badm.ua/index.php" >ссылкой</a> </div>
 											
 											</td>
 										</tr>

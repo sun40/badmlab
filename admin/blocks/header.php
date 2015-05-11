@@ -1,4 +1,4 @@
-<script type="text/javascript" src="/script/login.js"></script>
+﻿<script type="text/javascript" src="/script/login.js"></script>
 
 <table id="headertable" cellspacing="0" cellpadding="0">
 	<tr>

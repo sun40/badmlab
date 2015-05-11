@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 /**
  * This is a control panel for the thumbnail creating

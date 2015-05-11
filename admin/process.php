@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+﻿<?php session_start(); ?>
 <?php include("blocks/connect.php"); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -38,7 +38,7 @@
 										$id = $_SESSION['id'];
 										$query = "INSERT INTO articles (`article_id`, `article_title`, `article_prev`, `article_text`, `article_type`, `user_id`, `article_date`) VALUES (NULL, '$title', '$prev', '$text', 'n', '$id', '$date')";
 										mysql_query($query) or die(mysql_error());
-										header("Location: http://myhost.net/news.php");																				
+										header("Location: http://badm.ua/news.php");																				
 									}
 									elseif($_POST[action] == "edit_news") {
 										$id = $_POST[nid];
@@ -48,7 +48,7 @@
 										
 										$query = "UPDATE articles SET article_title = '$title', article_prev = '$prev', article_text = '$text' WHERE article_id = '$id'";
 										mysql_query($query) or die(mysql_error());
-										header("Location: http://myhost.net/index.php");	
+										header("Location: http://badm.ua/index.php");	
 										
 		
 									}
@@ -60,7 +60,7 @@
 										$id = $_SESSION['id'];
 										$query = "INSERT INTO articles (`article_id`, `article_title`, `article_prev`, `article_text`, `article_type`, `user_id`, `article_date`) VALUES (NULL, '$title', '$prev', '$text', 'a', '$id', '$date')";
 										mysql_query($query) or die(mysql_error());
-										header("Location: http://myhost.net/articles.php");																				
+										header("Location: http://badm.ua/articles.php");																				
 									}
 								 ?>
 

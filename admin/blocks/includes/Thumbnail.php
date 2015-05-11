@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 /**
  * This is a driver for the thumbnail creating

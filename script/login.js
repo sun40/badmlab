@@ -1,4 +1,4 @@
-function focusLogin(frm){
+﻿function focusLogin(frm){
 		frm.auth_name.value = "";
 		}
 		

@@ -1,4 +1,4 @@
-<div id="menu">
+﻿<div id="menu">
 	<ul>
 		<!-- CSS Tabs -->
 		<li><a href="../index.php">Главная</a></li>

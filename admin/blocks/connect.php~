@@ -1,4 +1,0 @@
-<?
-mysql_connect("localhost","root","100190") OR DIE("Не могу создать соединение ");
-mysql_select_db("badm_db") or die(mysql_error());
-?>

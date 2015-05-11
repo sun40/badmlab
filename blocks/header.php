@@ -1,4 +1,4 @@
-<script type="text/javascript" src="/script/login.js"></script>
+﻿<script type="text/javascript" src="/script/login.js"></script>
 
 <table id="headertable" cellspacing="0" cellpadding="0">
 	<tr>
@@ -18,7 +18,7 @@
 			if (!isset($_SESSION['name']))
 			{	
 			$adr = "";
-			echo("<form name='loginform' method='post' action='http://myhost.net/process.php' onsubmit='return validate(this);'>");
+			echo("<form name='loginform' method='post' action='http://badm.ua/process.php' onsubmit='return validate(this);'>");
 			echo("<input type='button' name='bt_reg' value='Регистрация' id='bt-reg' onclick='move()';/>");
 			echo("<input type='text' name='auth_name' value='Имя пользователя' size='10' id='txt-login' onfocus='focusLogin(loginform)'/>");
 			echo("<input type='password' name='auth_pass' value='password' size='10' id='txt-login' onfocus='focusPassword(loginform)'/>");
@@ -28,7 +28,7 @@
 			}
 			else 
 			{
-			echo("<form name='logoutform' method='post' action='http://myhost.net/process.php'>");
+			echo("<form name='logoutform' method='post' action='http://badm.ua/process.php'>");
 			echo("<input type='text' name='name' value='".$_SESSION['name']."' size='20' id='lname'>");
 			echo("<input type='submit' name='logout' value='Выход' id='logout'/>");
 			echo("<input type='hidden' name='track' value='logout'/>");

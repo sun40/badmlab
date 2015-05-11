@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+﻿<?php session_start(); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
@@ -66,7 +66,7 @@
 												echo('</form>');
 											}
 											echo('</div>');
-											echo('<object type="application/x-shockwave-flash" data="media/uflvplayer.swf" height="300" width="400"><param name="bgcolor" value="#FFFFFF" /><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="movie" value="/media/uflvplayer.swf" /><param name="FlashVars" value="way='.$row['path'].'&amp;swf=http://myhost.net/media/uflvplayer.swf&amp;w=400&amp;h=300&amp;pic=http://&amp;autoplay=0&amp;tools=1&amp;skin=black&amp;volume=70&amp;q=1&amp;comment='.$row[title].'"/></object>');										
+											echo('<object type="application/x-shockwave-flash" data="media/uflvplayer.swf" height="300" width="400"><param name="bgcolor" value="#FFFFFF" /><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="movie" value="/media/uflvplayer.swf" /><param name="FlashVars" value="way='.$row['path'].'&amp;swf=http://badm.ua/media/uflvplayer.swf&amp;w=400&amp;h=300&amp;pic=http://&amp;autoplay=0&amp;tools=1&amp;skin=black&amp;volume=70&amp;q=1&amp;comment='.$row[title].'"/></object>');										
 											echo('<form>');
 											echo('<input type="button" id="white"/>');					
 											echo('</form>');									

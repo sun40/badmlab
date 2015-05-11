@@ -1,4 +1,4 @@
-function checkReg(frm){
+﻿function checkReg(frm){
 	var login = frm.login.value;
 	var email = frm.email.value;
 	var email_rep = frm.email_rep.value;
