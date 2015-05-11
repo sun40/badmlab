@@ -6,7 +6,6 @@
 		<li><a href="../articles.php">Статьи</a></li>
 		<li><a href="../photo.php">Фото</a></a></li>
 		<li><a href="../video.php">Видео</a></li>
-		<li><a href="../forum/index.php">Форум</a></li>
 		<li><a href="../about.php">Про сайт</a></li>
 	</ul>
 </div>

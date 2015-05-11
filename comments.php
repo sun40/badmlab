@@ -169,7 +169,7 @@ if (isset($_SESSION[name])){
 								echo('<textarea name="comm_text" id="commtext" rows="5" cols="103" maxlength="515" onkeypress="return isNotMax(event)"></textarea>');
 								echo('<input type="hidden" name="track" value="comment" />');
 								echo("<input type='hidden' name='page' value='".$_GET['id']."' >");																									
-								echo('<center<input id="commtext" type="submit" name="submt" value="Отправить";"/></center>');
+								echo('<center><input id="commtext" type="submit" name="submt" value="Отправить";"/></center>');
 								echo('</form>');
 								echo('</td>');
 								echo('</tr>');
