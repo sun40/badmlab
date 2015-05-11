@@ -61,7 +61,10 @@
 														$query = "INSERT INTO users (`user_id`, `user_login`, `user_email`, `user_pass`, `user_priv`) VALUES (NULL, '$login', '$email', '$pass', 'u')";
 														mysql_query($query) or die(mysql_error());
 														mysql_close();
-														header("Location: http://badm.ua/reg_seccess.php");
+														echo("<script type='text/javascript'>");
+														echo("location.href='http://badm.ua/reg_seccess.php';");
+														echo("</script>");
+														//header("Location: http://badm.ua/reg_seccess.php");
 														}		
 														else echo("<div align='center'>Post method is empty!</div>"); 
 												   }
@@ -92,7 +95,10 @@
 											 		}
 											 		elseif($_POST[track] == "logout") {
 											 			session_destroy();
-											 			header("Location: http://badm.ua/index.php");
+														echo("<script type='text/javascript'>");
+														echo("location.href='http://badm.ua/index.php';");
+														echo("</script>");
+											 			//header("Location: http://badm.ua/index.php");
 											 		}
 											 		elseif($_POST[track] == "comment") {
 											 			$page = $_POST['page'];
@@ -103,7 +109,10 @@
 											 			echo($page);
 											 			$query = "INSERT INTO comments (id, date, text, page_id, user_id) VALUES (NULL, '$date', '$text', '$page', '$user')";
 														mysql_query($query) or die(mysql_error());
-														header("Location: http://badm.ua/comments.php?id=".$page);		
+														echo("<script type='text/javascript'>");
+														echo("location.href='http://badm.ua/comments.php?id=".$page."';");
+														echo("</script>");
+		
 											 		}
 											 		elseif($_POST[track] == "del_pic") {
 											 			$pic = $_POST['pic_id'];
@@ -113,13 +122,19 @@
 											 			$picpath = $_POST['pic_path'];
 											 			unlink("/home/sun40/etc/web".$picthumb);
 											 			unlink("/home/sun40/etc/web".$picpath);
-											 			header("Location: http://badm.ua/photo.php");
+														echo("<script type='text/javascript'>");
+														echo("location.href='http://badm.ua/photo.php';");
+														echo("</script>");
+											 			//header("Location: http://badm.ua/photo.php");
 											 		}
 											 		elseif($_POST[track] == "del_news") {
 											 			$news_id = $_POST['news_id'];
 											 			$query = "DELETE FROM articles WHERE article_id = '$news_id'";
 											 			mysql_query($query) or die(mysql_error());
-														header("Location: http://badm.ua/index.php");
+														echo("<script type='text/javascript'>");
+														echo("location.href='http://badm.ua/index.php';");
+														echo("</script>");
+														//header("Location: http://badm.ua/index.php");
 											 		}
 											 		elseif($_POST[track] == "del_video") {
 											 			echo($_POST['video_id']);
@@ -129,14 +144,20 @@
 											 			$query = "DELETE FROM video WHERE id = '$vid'";
 											 			mysql_query($query) or die(mysql_error());
 											 			unlink("/home/sun40/etc/web".$path);
-											 			header("Location: http://badm.ua/video.php");
+														echo("<script type='text/javascript'>");
+														echo("location.href='http://badm.ua/video.php';");
+														echo("</script>");
+											 			//header("Location: http://badm.ua/video.php");
 											 		}
 											 		elseif($_POST[track] == "del_com") {
 											 			$cid = $_POST[com_id];
 											 			$back = $_POST[back];
 											 			$query = "DELETE FROM comments WHERE id = '$cid'";
 											 			mysql_query($query) or die(mysql_error());
-											 			header("Location: http://badm.ua/comments.php?id=".$back);
+														echo("<script type='text/javascript'>");
+														echo("location.href='http://badm.ua/comments.php?id=".$back."';");
+														echo("</script>");
+											 			//header("Location: http://badm.ua/comments.php?id=".$back);
 											 			
 											 		}
 											 		
