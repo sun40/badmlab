@@ -52,46 +52,11 @@
 								$query = "SELECT articles.article_title, article_prev, article_id, article_text, article_type, article_date,  users.user_login FROM articles, users WHERE articles.user_id = users.user_id and article_type = 'n' ORDER BY article_id DESC LIMIT $start, $num";
 								$result = mysql_query($query);
 									
-								if(!isset($_SESSION[name])){	
+								if(isset($_SESSION[name]) && ($_SESSION[priv] == 'a' || $_SESSION[priv] == 'm')){	
 									
 									while($row = mysql_fetch_array($result))
   									{
-  										echo("<table border='0' id='article'>");
-										echo("<tr>");
-										echo("<td colspan='4'>");
-										echo("<h2 id='title'>");
-										echo($row['article_title']); 
-										echo("</h2>");
-										echo("</td>");
-										echo("</tr>");
-										echo("<tr>");
-										echo("<td colspan='4'>");
-										echo("<div id='content'>");
-										echo($row[article_prev]);
-										echo("</div>");
-										echo("</td>");
-										echo("</tr>");
-										echo("<tr>");
-										echo("<td>");
-										echo("<div id='author'>".$row['user_login']."</div>");
-										echo("</td>");
-										echo("<td>");
-										echo("<div id='data'>".$row['article_date']."</div>");
-										echo("</td>");
-										echo("<td></td>");
-										echo("<td>");
-										$queryd = "SELECT id FROM `comments` WHERE page_id =".$row['article_id'];
-										$res = mysql_query($queryd);
-										$count = mysql_num_rows($res);
-										echo("<div align='right'><a href='comments.php?id=".$row['article_id']."' id='comment'>Комментарии(".$count.")</a></div>");
-										echo("</td>");
-										echo("</tr>");
-										echo("</table>");
-  									}
-  								}
-  								else {
-  									while($row = mysql_fetch_array($result))
-  									{
+ 
   										echo('<table border="0" id="article">');
 										echo('<tr>');
 										echo('<td colspan="3" width="780">');
@@ -137,6 +102,43 @@
 										echo('</td>');
 										echo('</tr>');
 										echo('</table>');
+  									}
+  								}
+  								else {
+  									while($row = mysql_fetch_array($result))
+  									{
+									 										echo("<table border='0' id='article'>");
+										echo("<tr>");
+										echo("<td colspan='4'>");
+										echo("<h2 id='title'>");
+										echo($row['article_title']); 
+										echo("</h2>");
+										echo("</td>");
+										echo("</tr>");
+										echo("<tr>");
+										echo("<td colspan='4'>");
+										echo("<div id='content'>");
+										echo($row[article_prev]);
+										echo("</div>");
+										echo("</td>");
+										echo("</tr>");
+										echo("<tr>");
+										echo("<td>");
+										echo("<div id='author'>".$row['user_login']."</div>");
+										echo("</td>");
+										echo("<td>");
+										echo("<div id='data'>".$row['article_date']."</div>");
+										echo("</td>");
+										echo("<td></td>");
+										echo("<td>");
+										$queryd = "SELECT id FROM `comments` WHERE page_id =".$row['article_id'];
+										$res = mysql_query($queryd);
+										$count = mysql_num_rows($res);
+										echo("<div align='right'><a href='comments.php?id=".$row['article_id']."' id='comment'>Комментарии(".$count.")</a></div>");
+										echo("</td>");
+										echo("</tr>");
+										echo("</table>");
+										
   									}
   									
   								}

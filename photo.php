@@ -69,7 +69,7 @@
 											echo('<td>');
 											echo('<div align="center">');
 											echo('<div align="right">');
-											if (isset($_SESSION['name'])){											
+											if (isset($_SESSION['name']) && ($_SESSION[priv] == 'a' || $_SESSION[priv] == 'm')){											
 												echo('<form action="process.php" method="post">');
 												echo('<input type="hidden" value="del_pic" name="track" />');
 												echo('<input type="hidden" value="'.$row['pic_id'].'" name="pic_id"/>');
