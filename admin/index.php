@@ -24,15 +24,30 @@
 						<table id="maintable">
 							<tr>
 								<td id="menuleft" align="top">
-									<?php include("blocks/left.php"); ?>
+									<?php 
+									if($_SESSION['priv'] == 'a' || $_SESSION['priv'] == 'm'){
+										include("blocks/left.php");
+									}
+									else{
+										include("../blocks/left.php");
+									}
+									?>
 								</td> 
 								<td width="780" valign="top">
 									
 									<table id="regdone">
 										<tr>
 											<td>
-											 <div>Добро пожаловать в админку!</div>
-											 <div>Выбрете действие которое необходимо выполнить на панели слева.</div>
+											<?php
+											if($_SESSION['priv'] == 'a' || $_SESSION['priv'] == 'm'){
+												echo("<div>Добро пожаловать в админку!</div>");
+												echo("<div>Выбрете действие которое необходимо выполнить на панели слева.</div>");
+											}
+											else{
+												echo("<div>У вас не достаточно прав для просмотра этой страницы.</div>");
+											}
+											 
+											 ?>
 											</td>
 										</tr>
 									</table>

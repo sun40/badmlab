@@ -136,19 +136,6 @@
 														echo("</script>");
 														//header("Location: http://badm.ua/index.php");
 											 		}
-											 		elseif($_POST[track] == "del_video") {
-											 			echo($_POST['video_id']);
-											 			echo($_POST['path']);
-											 			$vid = $_POST['video_id'];
-											 			$path = $_POST['path'];
-											 			$query = "DELETE FROM video WHERE id = '$vid'";
-											 			mysql_query($query) or die(mysql_error());
-											 			unlink("/home/sun40/etc/web".$path);
-														echo("<script type='text/javascript'>");
-														echo("location.href='http://badm.ua/video.php';");
-														echo("</script>");
-											 			//header("Location: http://badm.ua/video.php");
-											 		}
 											 		elseif($_POST[track] == "del_com") {
 											 			$cid = $_POST[com_id];
 											 			$back = $_POST[back];
