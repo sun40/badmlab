@@ -1,6 +1,8 @@
-﻿<script type="text/javascript" src="/script/login.js"></script>
+﻿<!-- Скрипт для проверки вводимых данных в форму авторизации -->
+<script type="text/javascript" src="/script/login.js"></script>
 
 <table id="headertable" cellspacing="0" cellpadding="0">
+    <!-- Вывод колонок с изображениями -->
 	<tr>
 		<td rowspan="2"><img src="../img/header_left.jpg"/></td>
 		<td valign="top"><img src="../img/header_center.jpg"/></td>
@@ -8,6 +10,7 @@
 	</tr>
 	<tr>
 		<td bgcolor="black" height="62">
+        <!-- скрипт для перенаправления на страничку регистрации -->
 		<script type="text/javascript" >
 			function move(){
 				self.location.href='reg.php';
@@ -15,6 +18,9 @@
 		</script>
 		<center>
 			<?php
+            //Проверка, если переменная name
+            // в глобальной переменной-массиве $_SESSION не существует
+            // тогда вывод формы для авторизации
 			if (!isset($_SESSION['name']))
 			{	
 			$adr = "";
@@ -26,6 +32,8 @@
 			echo("<input type='hidden' name='track' value='auth'/>");
 			echo("</form>");
 			}
+            //Если переменная существует, то
+            //вывод логина пользователя и кнопки для выхода
 			else 
 			{
 			echo("<form name='logoutform' method='post' action='http://badm.ua/process.php'>");

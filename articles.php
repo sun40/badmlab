@@ -50,7 +50,7 @@
 								$query = "SELECT articles.article_title, article_prev, article_id, article_text, article_type, article_date,  users.user_login FROM articles, users WHERE articles.user_id = users.user_id and article_type = 'a' ORDER BY article_id DESC LIMIT $start, $num";
 								$result = mysql_query($query);
 									
-								if(isset($_SESSION[name]) && ($_SESSION[priv] == 'a' || $_SESSION[priv] == 'm')){	
+								if(isset($_SESSION[name]) && ($_SESSION[priv] == 'a')){	
 									
 									while($row = mysql_fetch_array($result))
   									{

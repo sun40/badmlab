@@ -1,11 +1,15 @@
-﻿function focusLogin(frm){
+﻿//При нажатии на форму ввода логина, убирает введенный текст
+function focusLogin(frm){
 		frm.auth_name.value = "";
 		}
-		
+
+//При нажатии на форму ввода пароля, убирает введенный текст
 function focusPassword(frm){
 		frm.auth_pass.value = "";
 	}
 
+//Проверка ввел ли пользователь какие-то данные формы
+// если нет - тогда показывает сообщение об ошибке
 function validate(frm){
 	var userName = frm.auth_name.value;
 	var password = frm.auth_pass.value;
