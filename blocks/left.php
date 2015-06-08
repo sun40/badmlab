@@ -23,23 +23,3 @@
         echo("</div>");
     }
 ?>
-
-<!-- Отображение рекламных баннеров под меню слева -->
-<div align="center">
-	<br>
-	<br>
-	<br>
-	<a href=""><img src="../img/banner/hitec.jpg" width="120" height="40" alt="" /></a>
-	<br>
-	<a href=""><img src="../img/banner/aeroplan.jpg" width="120" height="40" alt="" /></a>
-	<br>
-	<a href=""><img src="../img/banner/fukuda.jpg" width="120" height="40" alt="" /></a>
-	<br>
-	<a href=""><img src="../img/banner/tret.gif" width="120" height="40" alt="" /></a>
-	<br>
-	<a href=""><img src="../img/banner/wilson.gif" width="120" height="40" alt="" /></a>
-	<br>
-	<a href=""><img src="../img/banner/tronex.gif" width="120" height="40" alt="" /></a>
-	<br>
-	<a href=""><img src="../img/banner/wmaster.gif" width="120" height="40" alt="" /></a>
-</div>

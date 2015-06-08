@@ -49,7 +49,9 @@
                                 //Оправка запроса на вставку в бд, в случае ошибки вывести возникшую ошибку на экран
                                 mysql_query($query) or die(mysql_error());
                                 //перенаправление на страничку с новостями
-                                header("Location: http://badm.ua/news.php");
+                                echo("<script type='text/javascript'>");
+                                echo("location.href='http://badm.ua/news.php';");
+                                echo("</script>");
                             } //Обработка данных для редактирование новости или статьи
                             elseif ($_POST[action] == "edit_news") {
                                 //получаем значения переменных из глобальной переменной $_POST
@@ -64,7 +66,9 @@
                                 //Оправка запроса в бд, в случае ошибки вывести возникшую ошибку на экран
                                 mysql_query($query) or die(mysql_error());
                                 //перенаправление на главную страничку
-                                header("Location: http://badm.ua/index.php");
+                                echo("<script type='text/javascript'>");
+                                echo("location.href='http://badm.ua/index.php';");
+                                echo("</script>");
 
                             }
 
@@ -84,7 +88,9 @@
                                 //Оправка запроса на вставку в бд, в случае ошибки вывести возникшую ошибку на экран
                                 mysql_query($query) or die(mysql_error());
                                 //перенаправление на страничку со статьями
-                                header("Location: http://badm.ua/articles.php");
+                                echo("<script type='text/javascript'>");
+                                echo("location.href='http://badm.ua/articles.php';");
+                                echo("</script>");
                             }
                             ?>
 
