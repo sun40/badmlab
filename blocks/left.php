@@ -15,11 +15,11 @@
     // отобразить расширенное меню
     if(isset($_SESSION['name']) && (($_SESSION['priv']) == "a" || ($_SESSION['priv']) == "m")){
         echo("<div id='menu2'>");
-        echo("<ul>");
-        echo("<li><a href='../admin/add_news.php'>Добавить новость</a></li>");
-        echo("<li><a href='../admin/add_article.php'>Добавить статью</a></li>");
-        echo("<li><a href='../admin/add_img.php'>Добавить фото</a></li>");
-        echo("</ul>");
+            echo("<ul>");
+            echo("<li><a href='../admin/add_news.php'>Добавить новость</a></li>");
+            echo("<li><a href='../admin/add_article.php'>Добавить статью</a></li>");
+            echo("<li><a href='../admin/add_img.php'>Добавить фото</a></li>");
+            echo("</ul>");
         echo("</div>");
     }
 ?>

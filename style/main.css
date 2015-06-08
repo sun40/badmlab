@@ -16,8 +16,6 @@ img {
 	
 #menu li a {
 	height: 32px;
-  	voice-family: "\"}\""; 
-  	voice-family: inherit;
   	height: 24px;
 	text-decoration: none;
 	}	
@@ -42,8 +40,6 @@ img {
 	
 #menu2 li a {
 	height: 32px;
-  	voice-family: "\"}\""; 
-  	voice-family: inherit;
   	height: 24px;
 	text-decoration: none;
 	}	
@@ -343,6 +339,7 @@ input#delete {
 	height: 16px;
 	width: 16px;
 	}
+
 input#white {
 	background-color: white;
 	border-width: 0px;
