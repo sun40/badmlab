@@ -256,7 +256,12 @@ input#lname {
 	background-color: black;
 	border-style: none;
 	}
-	
+
+form#reguser {
+    margin-top: 40%;
+    margin-bottom: 10%;
+}
+
 input#logout {
 	margin-left: 300px;
 	color: #B00000;

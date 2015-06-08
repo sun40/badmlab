@@ -27,10 +27,11 @@
                             <?php include("blocks/left.php"); ?>
                         </td>
                         <td width="780">
+
                             <!-- Подключерие скрипта для проверки полей регистрации -->
                             <script type="text/javascript" src="/script/reg.js"></script>
                             <!-- Вывод формы для регистрации -->
-                            <form name="reg" action="process.php" method="POST" onsubmit="return checkReg(reg)">
+                            <form  id="reguser" name="reg" action="process.php" method="POST" onsubmit="return checkReg(reg)">
                                 <table border="0" id="regform">
                                     <tr>
                                         <td colspan="2">
@@ -83,7 +84,6 @@
                                 </table>
                                 <input type="hidden" name="track" value="reg"/>
                             </form>
-
 
                         </td>
                     </tr>
