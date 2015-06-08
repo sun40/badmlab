@@ -1,9 +1,10 @@
-﻿<?php session_start(); ?>
+﻿<?php session_start(); ?> <!-- Cтарт сессии пользователя -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
 
 	<head>
+        <!-- Включение контекста html -->
 		<?php include("blocks/head.php"); ?>	
 	</head>
 	
@@ -12,10 +13,8 @@
 		<center>
 			<table id="maintable" background="img/4.png" >
 				<tr>
-					<td bgcolor="black">				
-			
-			
-				
+					<td bgcolor="black">
+                        <!-- Подключение хедера -->
 						<?php include("blocks/header.php"); ?>
 					</td>
 				</tr>
@@ -24,22 +23,30 @@
 						<table id="maintable">
 							<tr>
 								<td id="menuleft" align="top">
+                                    <!-- Подключение меню навигации слева -->
 									<?php include("blocks/left.php"); ?>
 								</td> 
 								<td width="780" valign="top">
 									
 								
-<?php
+                            <?php
+                                //Подключени к базе даных
 								include("blocks/connect.php");
-									
-								$num = 5; 
+
+                                //Количество статей на страницу - 5 шт
+								$num = 5;
+                                //Если указана страница - берем номер страницы с
+                                //глобальной переменной $_GET, если нет номер страницы = 1
 								if (isset($_GET['page'])) 
 									$page = $_GET['page'];
-								else 
+								else
 									 $page = 1;
-								
-								$result = mysql_query("SELECT COUNT(*) FROM articles WHERE article_type = 'a'"); 
+
+                                //Запроса к базе данных - выбор кол-ва статей в таблице
+								$result = mysql_query("SELECT COUNT(*) FROM articles WHERE article_type = 'a'");
+                                //
 								$posts = mysql_result($result, 0);
+
 								$total = intval(($posts - 1) / $num) + 1; 
 								$page = intval($page); 
 								if(empty($page) or $page < 0) $page = 1; 
@@ -50,7 +57,7 @@
 								$query = "SELECT articles.article_title, article_prev, article_id, article_text, article_type, article_date,  users.user_login FROM articles, users WHERE articles.user_id = users.user_id and article_type = 'a' ORDER BY article_id DESC LIMIT $start, $num";
 								$result = mysql_query($query);
 									
-								if(isset($_SESSION[name]) && ($_SESSION[priv] == 'a')){	
+								if(isset($_SESSION[name]) && ($_SESSION[priv] == 'a')){
 									
 									while($row = mysql_fetch_array($result))
   									{
@@ -141,9 +148,6 @@
   								}
 								?>
 
-
-
-
 										<table border="1" id="article">
 										<tr>
 											<td>
@@ -175,7 +179,10 @@
 						</table>
 					</td>
 				</tr>
-				<tr><td><?php include("blocks/footer.php"); ?></td></tr>
+				<tr><td>
+                        <!-- Подключение футера -->
+                        <?php include("blocks/footer.php"); ?>
+                    </td></tr>
 			</table>
 		</center>
 	</body>

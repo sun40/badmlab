@@ -22,6 +22,7 @@
 						<table id="maintable">
 							<tr>
 								<td id="menuleft" align="top">
+                                    <!-- Подключение меню навигации слева -->
 									<?php include("blocks/left.php"); ?>
 								</td> 
 								<td width="780" valign="top">

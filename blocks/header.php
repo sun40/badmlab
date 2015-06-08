@@ -23,7 +23,6 @@
             // тогда вывод формы для авторизации
 			if (!isset($_SESSION['name']))
 			{	
-			$adr = "";
 			echo("<form name='loginform' method='post' action='http://badm.ua/process.php' onsubmit='return validate(this);'>");
 			echo("<input type='button' name='bt_reg' value='Регистрация' id='bt-reg' onclick='move()';/>");
 			echo("<input type='text' name='auth_name' value='Имя пользователя' size='10' id='txt-login' onfocus='focusLogin(loginform)'/>");

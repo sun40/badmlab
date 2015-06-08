@@ -1,21 +1,22 @@
-﻿<?php session_start(); ?>
+﻿<?php session_start(); ?> <!-- Старт сессии для этой странички -->
+
+<!-- Задание типа текущей странички (для браузера)  -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
 
 	<head>
+        <!-- Включение контекста html -->
 		<?php include("blocks/head.php"); ?>	
 	</head>
 	
-	
+
 	<body background="img/2.png">
 		<center>
 			<table id="maintable" background="img/4.png" >
 				<tr>
-					<td bgcolor="black">				
-			
-			
-				
+					<td bgcolor="black">
+                        <!-- Подключени хедера -->
 						<?php include("blocks/header.php"); ?>
 					</td>
 				</tr>
@@ -24,12 +25,10 @@
 						<table id="maintable">
 							<tr>
 								<td id="menuleft" align="top">
+                                    <!-- Подключение меню навигации слева -->
 									<?php include("blocks/left.php"); ?>
 								</td> 
 								<td width="780">
-									
-		
-		
 									<table border="0" id="article">
 									<tr>
 										<td colspan="4">
@@ -40,6 +39,7 @@
 									</tr>
 									<tr>
 										<td colspan="4">
+                                            <!-- Текст странички "О Нас" -->
 										<div id="content">
 												К сожалению, не буду кратким, и постараюсь изложить в этом письме свои мысли относительно дальнейшего развития бадминтона (вообще любого вида спорта) в Украине.<p>
 
@@ -92,6 +92,7 @@
 						</table>
 					</td>
 				</tr>
+                <!-- Подключение футера -->
 				<tr><td><?php include("blocks/footer.php"); ?></td></tr>
 			</table>
 		</center>
