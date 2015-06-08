@@ -42,42 +42,50 @@
 								else
 									 $page = 1;
 
-                                //Запроса к базе данных - выбор кол-ва статей в таблице
+                                //Запрос к базе данных - выбор кол-ва статей в таблице
 								$result = mysql_query("SELECT COUNT(*) FROM articles WHERE article_type = 'a'");
-                                //
+                                //Получение результата запроса к БД
 								$posts = mysql_result($result, 0);
-
-								$total = intval(($posts - 1) / $num) + 1; 
+                                //Подсчет сколько всего страниц по 5 статей существует
+								$total = intval(($posts - 1) / $num) + 1;
+                                //Подсчет сколько статей и с какой позиции отсчитывать для данной страницы
 								$page = intval($page); 
 								if(empty($page) or $page < 0) $page = 1; 
   								if($page > $total) $page = $total; 
 								$start = $page * $num - $num; 									
 															
-								
+								//Формирование запроса для выборки из БД статей для данной страницы
 								$query = "SELECT articles.article_title, article_prev, article_id, article_text, article_type, article_date,  users.user_login FROM articles, users WHERE articles.user_id = users.user_id and article_type = 'a' ORDER BY article_id DESC LIMIT $start, $num";
+                                //Запрос к БД и запись результата в переменную $result
 								$result = mysql_query($query);
-									
+
+                                //Если пользователь авторизирован и с правами администратора
+                                //Тогда выводим расширенную версию отображения статьи
+                                //C возможностю удаления и редакрирования
 								if(isset($_SESSION[name]) && ($_SESSION[priv] == 'a')){
-									
+									//Цикл для вывода статей, цикл завершится, когда в результате не будет рядков
 									while($row = mysql_fetch_array($result))
   									{
   										echo('<table border="0" id="article">');
 										echo('<tr>');
 										echo('<td colspan="3" width="780">');
 										echo('<h2 id="title">');
+                                        //вывод названия статьи
 										echo($row['article_title']);
 										echo('</h2>');												
 										echo('</td>');
 										echo('<td valign="top">');
 										echo('<div align="right">');
 										echo('<form name="edit" method="post" action="/admin/edit_news.php">');
-										echo('<input type="submit" name="edit_button" value="" id="bt-edit"/>');	
+										echo('<input type="submit" name="edit_button" value="" id="bt-edit"/>');
+                                        //Вывод айди статьи в невидимую форму, для кнопки редактирования статьи
 										echo('<input type="hidden" name="news_id" value="'.$row[article_id].'"/>');											
 										echo('</form>');											
 										echo('</div>');
 										echo('<div align="right">');
 										echo('<form name="delete" method="post" action="process.php">');
 										echo('<input type="submit" name="delete_button" value="" id="delete"/>');
+                                        //Вывод айди статьи в невидимую форму, для кнопки удаления статьи
 										echo('<input type="hidden" name="news_id" value="'.$row[article_id].'"/>');
 										echo('<input type="hidden" name="track" value="del_news" />');												
 										echo('</form>');
@@ -87,20 +95,28 @@
 										echo('<tr>');
 										echo('<td colspan="4">');
 										echo('<div id="content">');
+                                        //Вывод краткого содержания статьи
 										echo($row[article_prev]); 										
 										echo('</div>');
 										echo('</td>');
 										echo('</tr>');
 										echo('<tr>');
 										echo('<td>');
+                                        //Вывод имени автора статьи
 										echo("<div id='author'>".$row['user_login']."</div>");
 										echo('</td>');
 										echo('<td>');
+                                        //вывод даты написания статьи
 										echo("<div id='data'>".$row['article_date']."</div>");
 										echo('</td>');
+                                        //Формирование запроса в БД для кол-ва коментариев к статье
 										$queryd = "SELECT id FROM `comments` WHERE page_id =".$row['article_id'];
+                                        //Запрос к БД
 										$res = mysql_query($queryd);
+                                        //Подсчет кол-ва комментариев в ответе из БД
 										$count = mysql_num_rows($res);
+                                        //Вывод кол-ва статей в текст ссылки и формирование
+                                        // ссылки на открытие полного текста статьи с помощью ее айди
 										echo('<td><div align="right"><a href="comments.php?id='.$row[article_id].'" id="comment">Комментарии('.$count.')</a></div></td>');
 										echo('<td>');										
 										echo('</td>');
@@ -108,6 +124,8 @@
 										echo('</table>');
   									}
   								}
+                                //Если пользователь не является администратором и не авторизирован
+                                //Выводим обычное отображение статьи без доп. кнопок
   								else {
   									while($row = mysql_fetch_array($result))
   									{
@@ -115,6 +133,7 @@
 										echo("<tr>");
 										echo("<td colspan='4'>");
 										echo("<h2 id='title'>");
+                                        //вывод названия статьи
 										echo($row['article_title']); 
 										echo("</h2>");
 										echo("</td>");
@@ -122,22 +141,30 @@
 										echo("<tr>");
 										echo("<td colspan='4'>");
 										echo("<div id='content'>");
+                                        //Вывод краткого содержания статьи
 										echo($row[article_prev]);
 										echo("</div>");
 										echo("</td>");
 										echo("</tr>");
 										echo("<tr>");
 										echo("<td>");
+                                        //Вывод имени автора статьи
 										echo("<div id='author'>".$row['user_login']."</div>");
 										echo("</td>");
 										echo("<td>");
+                                        //вывод даты написания статьи
 										echo("<div id='data'>".$row['article_date']."</div>");
 										echo("</td>");
 										echo("<td></td>");
 										echo("<td>");
+                                        //Формирование запроса в БД для кол-ва коментариев к статье
 										$queryd = "SELECT id FROM `comments` WHERE page_id =".$row['article_id'];
+                                        //Запрос к БД
 										$res = mysql_query($queryd);
+                                        //Подсчет кол-ва комментариев в ответе из БД
 										$count = mysql_num_rows($res);
+                                        //Вывод кол-ва статей в текст ссылки и формирование
+                                        // ссылки на открытие полного текста статьи с помощью ее айди
 										echo("<div align='right'><a href='comments.php?id=".$row['article_id']."' id='comment'>Комментарии(".$count.")</a></div>");
 										echo("</td>");
 										echo("</tr>");
@@ -152,7 +179,7 @@
 										<tr>
 											<td>
 											<?php 
-												 
+                                                //Подсчет и вывод навигации по страничкам
 												$pgs = "articles.php";
 												if ($page != 1) $pervpage = '<a id="comment" href= ./'.$pgs.'?page=1><<</a>&nbsp;&nbsp;<a id="comment" href= ./'.$pgs.'?page='. ($page - 1) .'><</a> ';  
 												if ($page != $total) $nextpage = ' <a id="comment" href= ./'.$pgs.'?page='. ($page + 1) .'>></a>&nbsp;&nbsp;<a id="comment" href= ./'.$pgs.'?page=' .$total. '>>></a>'; 

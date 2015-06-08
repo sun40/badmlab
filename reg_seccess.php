@@ -1,22 +1,20 @@
-﻿<?php session_start(); ?>
-<?php include("blocks/connect.php"); ?>
+﻿<?php session_start(); ?> <!-- Cтарт сессии пользователя -->
+<?php include("blocks/connect.php"); ?> <!-- Подключение к базе данных -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
 
 	<head>
+        <!-- Включение контекста html -->
 		<?php include("blocks/head.php"); ?>		
 	</head>
-	
-	
+
 	<body background="img/2.png">
 		<center>
 			<table id="maintable" background="img/4.png" >
 				<tr>
-					<td bgcolor="black">				
-			
-			
-				
+					<td bgcolor="black">
+                        <!-- Подключение хедера -->
 						<?php include("blocks/header.php"); ?>
 					</td>
 				</tr>
@@ -25,6 +23,7 @@
 						<table id="maintable">
 							<tr>
 								<td id="menuleft" align="top">
+                                    <!-- Подключение меню навигации слева -->
 									<?php include("blocks/left.php"); ?>
 								</td> 
 								<td width="780" valign="top">
@@ -36,8 +35,11 @@
 											<div>Можете зайти на сайт используя свой логин и пароль.</div>
 											<br><div>Вы будете перенаправлены на главную страницу
 											через <span id="timer"></span> секунд.</div>
+                                            <!-- Скрипт перенаправления на главную страницу
+                                                после регистрации через 5 секунд
+                                             -->
 											<script type="text/javascript">
-											var t=20;
+											var t=5;
 											function refr_time()
 											{
   												if (t>0)
@@ -63,7 +65,10 @@
 						</table>
 					</td>
 				</tr>
-				<tr><td><?php include("blocks/footer.php"); ?></td></tr>
+				<tr><td>
+                        <!-- Подключение футера -->
+                        <?php include("blocks/footer.php"); ?>
+                    </td></tr>
 			</table>
 		</center>
 	</body>
